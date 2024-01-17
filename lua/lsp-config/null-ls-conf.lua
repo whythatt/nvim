@@ -1,7 +1,6 @@
 local null_ls = require("null-ls")
 
 local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -9,7 +8,6 @@ null_ls.setup({
 	sources = {
 		formatting.djlint,
 		formatting.black,
-		formatting.stylua,
 	},
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then

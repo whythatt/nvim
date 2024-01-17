@@ -2,6 +2,7 @@ return require("packer").startup({
 	function(use)
 		use("wbthomason/packer.nvim")
 		-- colorizer
+        use({ "catppuccin/nvim", as = "catppuccin" })
 		use({ "ellisonleao/gruvbox.nvim" })
 		use({
 			"svrana/neosolarized.nvim",
@@ -15,7 +16,7 @@ return require("packer").startup({
 		use("nvim-tree/nvim-web-devicons")
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			run = ":TSUpdate",
+            run = ":TSUpdate"
 		})
 		use("terrortylor/nvim-comment")
 		-- lsp-config
@@ -24,8 +25,9 @@ return require("packer").startup({
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
 		})
-		use("jose-elias-alvarez/null-ls.nvim")
-		use("jayp0521/mason-null-ls.nvim")
+		-- use("jose-elias-alvarez/null-ls.nvim")
+		-- use("jayp0521/mason-null-ls.nvim")
+        use({"stevearc/conform.nvim"})
 		-- nvim-cmp
 		use({
 			"hrsh7th/cmp-nvim-lsp",
@@ -35,12 +37,11 @@ return require("packer").startup({
 			"hrsh7th/nvim-cmp",
 			"L3MON4D3/LuaSnip",
 		})
-		-- telescope
-		use({
-			"nvim-telescope/telescope.nvim",
-			tag = "0.1.1",
-			requires = { { "nvim-lua/plenary.nvim" } },
-		})
+        -- telescope
+        use {
+            'nvim-telescope/telescope.nvim', tag = '0.1.5',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
 		use("yamatsum/nvim-cursorline")
 		use("m4xshen/autoclose.nvim")
 		use("norcalli/nvim-colorizer.lua")
