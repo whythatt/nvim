@@ -8,10 +8,6 @@ return require("packer").startup({
 			"svrana/neosolarized.nvim",
 			requires = { "tjdevries/colorbuddy.nvim" },
 		})
-		use({
-			"nvim-lualine/lualine.nvim",
-			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-		})
 		use("nvim-tree/nvim-tree.lua")
 		use("nvim-tree/nvim-web-devicons")
 		use({
@@ -24,7 +20,6 @@ return require("packer").startup({
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
-			"jose-elias-alvarez/null-ls.nvim",
 		})
 		use({ "stevearc/conform.nvim" })
 		-- nvim-cmp
@@ -45,11 +40,6 @@ return require("packer").startup({
 		use("yamatsum/nvim-cursorline")
 		use("m4xshen/autoclose.nvim")
 		use("norcalli/nvim-colorizer.lua")
-		-- debugging
-		use("mfussenegger/nvim-dap-python")
-		use("mfussenegger/nvim-dap")
-		use("rcarriga/nvim-dap-ui")
-		use("nvim-neotest/nvim-nio")
 		-- indent
 		use("lukas-reineke/indent-blankline.nvim")
 	end,

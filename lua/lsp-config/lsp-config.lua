@@ -16,15 +16,6 @@ require("mason-lspconfig").setup({
 		"cssls",
 	},
 })
--- for formatting
--- require("mason-null-ls").setup({
--- 	ensure_installed = {
--- 		"djlint",
--- 		-- "autopep8",
--- 		"stylua",
--- 		"black",
--- 	},
--- })
 
 local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, noremap = true, silent = true }
